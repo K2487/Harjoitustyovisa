@@ -118,7 +118,7 @@ namespace Tietovisa
             answerbutton3.Content = "Koripalloon";
             answerbutton4.Content = "Pesäpalloon";
         }
-        private void Question8() 
+        private void Question8()  
         {
             question.Text = "Mikä on taitoluistelun aikaisempi nimitys?";
             answerbutton1.Content = "Kainoluistelu";
