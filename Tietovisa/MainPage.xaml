@@ -7,7 +7,18 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+    <Grid BorderThickness="0" MinWidth="1280" MinHeight="720" MaxWidth="1280" MaxHeight="720">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="0.194"/>
+                <GradientStop Color="#FF134355" Offset="0.814"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="475,112,0,0" TextWrapping="Wrap" Text="Tietovisa" VerticalAlignment="Top" Height="106" Width="330"  FontSize="72" FocusVisualPrimaryBrush="#FFF9F9F9" Foreground="#FF8E97EE" FontFamily="Rockwell"/>
+        <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="443,461,0,0" TextWrapping="Wrap" Text="Valitse kategoria" VerticalAlignment="Top" Height="106" Width="390"  FontSize="48" FocusVisualPrimaryBrush="#FFF9F9F9" Foreground="#FF8E97EE" FontFamily="Rockwell"/>
+        <Button x:Name="button" Content="Urheilu" Click="button_Click" HorizontalAlignment="Left" Margin="540,572,0,0" VerticalAlignment="Top" Height="100" Width="200" FontSize="36" Foreground="Black" FocusVisualPrimaryBrush="Black" FocusVisualSecondaryBrush="#990F0C0C" Background="#3300FF00" FontFamily="Rockwell"/>
+        <Button x:Name="button2" Content="Maantieto" Click="button2_Click_1" HorizontalAlignment="Left" Margin="170,572,0,0" VerticalAlignment="Top" Height="100" Width="200" FontSize="36" Foreground="Black" FocusVisualPrimaryBrush="Black" FocusVisualSecondaryBrush="#990F0C0C" Background="#33F50000" FontFamily="Rockwell"/>
+        <Button x:Name="button3" Content="Ruoka" Click="button3_Click"  HorizontalAlignment="Left" Margin="910,572,0,0" VerticalAlignment="Top" Height="100" Width="200" FontSize="36" Foreground="Black" FocusVisualPrimaryBrush="Black" FocusVisualSecondaryBrush="#990F0C0C" Background="#33021F81" FontFamily="Rockwell"/>
+        <Frame x:Name="MyFrame"></Frame>
     </Grid>
 </Page>
