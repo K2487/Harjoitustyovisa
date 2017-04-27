@@ -42,10 +42,15 @@ namespace Tietovisa
             var stream = await file.OpenAsync(FileAccessMode.Read);
             mediaElement.AutoPlay = true;
             mediaElement.SetSource(stream, file.ContentType);
-
-            mediaElement2 = new MediaElement();
+            }
+            catch (System.IO.FileNotFoundException)
+            {     //Jos ääntä ei löydy ei sitä soiteta ollenkaan
+            }
+            try
+            {
+                mediaElement2 = new MediaElement();
             StorageFolder folder2 = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFolderAsync("Assets");
-            StorageFile file2 = await folder.GetFileAsync("click1.wav");
+            StorageFile file2 = await folder2.GetFileAsync("click1.wav");
             var stream2 = await file2.OpenAsync(FileAccessMode.Read);
             mediaElement2.AutoPlay = false;
             mediaElement2.SetSource(stream2, file2.ContentType);
